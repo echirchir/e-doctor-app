@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/upperSection"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="32dp"
+        android:background="@color/black">
+
+        <TextView
+            android:id="@+id/profileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            />
+
+        <ImageView
+            android:id="@+id/avatarView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+
+            android:src="@drawable/doctor_photo"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_photo_background"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileTitle"
+            />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dr. Wafula Chebukati"
+            android:textColor="@color/white"
+
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingTop="16dp"
+
+            app:layout_constraintStart_toEndOf="@id/avatarView"
+            app:layout_constraintTop_toTopOf="@id/avatarView"
+
+            android:paddingStart="16dp"
+            />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dentist"
+            android:textColor="@android:color/darker_gray"
+
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingTop="8dp"
+
+            app:layout_constraintStart_toEndOf="@id/avatarView"
+            app:layout_constraintTop_toBottomOf="@id/name"
+
+            android:paddingStart="16dp"
+            />
+
+        <ImageView
+            android:id="@+id/rating_star"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+
+            android:src="@drawable/star_rating"
+            android:paddingTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingBottom="16dp"
+
+            app:layout_constraintStart_toEndOf="@id/avatarView"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            />
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4.95"
+            android:textColor="@color/white"
+
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp"
+
+            app:layout_constraintStart_toEndOf="@id/rating_star"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintTop_toTopOf="@id/rating_star"
+            app:layout_constraintBottom_toBottomOf="@id/rating_star"
+
+            android:paddingStart="4dp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lowerSection"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toBottomOf="@id/upperSection"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/white_rounded_background"
+
+        android:scaleY="1.2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/innerSection"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            android:layout_marginTop="62dp"
+            android:layout_marginHorizontal="32dp"
+
+            android:background="@drawable/rounded_description_background">
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="About"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+
+                android:paddingTop="16dp"
+                android:paddingHorizontal="16dp"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/about_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type so the leap into electronic typesettinghanged"
+                android:textSize="16sp"
+
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="16dp"
+
+                app:layout_constraintTop_toBottomOf="@id/about"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/calendar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@mipmap/ic_launcher_round"
+
+                app:layout_constraintTop_toBottomOf="@id/about_details"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"
+
+                android:paddingStart="16dp"
+                />
+
+            <TextView
+                android:id="@+id/day_of_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monday - Friday"
+                android:textColor="@color/black"
+
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:paddingTop="8dp"
+
+                app:layout_constraintStart_toEndOf="@id/calendar"
+                app:layout_constraintTop_toTopOf="@id/calendar"
+
+                android:paddingStart="16dp"
+                />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8PM - 6PM"
+                android:textColor="@android:color/darker_gray"
+
+                android:textStyle="bold"
+                android:textSize="18sp"
+
+                app:layout_constraintStart_toEndOf="@id/calendar"
+                app:layout_constraintTop_toBottomOf="@id/day_of_week"
+
+                android:paddingStart="16dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open"
+                android:textColor="@color/white"
+
+                app:layout_constraintStart_toEndOf="@id/day_of_week"
+                app:layout_constraintTop_toTopOf="@id/day_of_week"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                android:layout_marginTop="16dp"
+                android:textAllCaps="false"
+                android:background="@drawable/rounded_button_background"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Make An Appointment"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button_background"
+            android:layout_marginTop="16dp"
+
+            android:visibility="gone"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/innerSection"
+            android:translationY="-30dp"
+            android:layout_marginHorizontal="8dp"
+
+            android:textAllCaps="false"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
